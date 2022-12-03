@@ -459,6 +459,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "${KIPRJMOD}/7SEG_SA05_0.step"
+      (offset (xyz 3.75 -5 0))
+      (scale (xyz 0.7 0.7 0.7))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" (layer "F.Cu")
@@ -2629,6 +2634,11 @@
     (model "${KICAD6_3DMODEL_DIR}/Display_7Segment.3dshapes/Sx39-1xxxxx.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KIPRJMOD}/7SEG_SA05_0.step"
+      (offset (xyz 3.75 -5 0))
+      (scale (xyz 0.7 0.7 0.7))
       (rotate (xyz 0 0 0))
     )
   )
