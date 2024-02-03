@@ -1,0 +1,78 @@
+Name     bcd;
+PartNo   00 ;
+Date     10/11/2022 ;
+Revision 01 ;
+Designer Jeroen Venema ;
+Company  Venomspot ;
+Assembly None ;
+Location  ;
+Device   G22V10CP;
+
+PIN 2 = IOWR;                       /* IOWR active low                 */
+PIN 3 = RESET;                      /* System reset line               */
+
+/* *************** INPUT PINS *********************/
+PIN 5   = D3                      ; /* MSB                             */ 
+PIN 6   = D2                      ; /*                                 */ 
+PIN 7   = D1                      ; /*                                 */ 
+PIN 8   = D0                      ; /* LSB                             */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN 14  = G                        ; /*                                 */ 
+PIN 15  = F                        ; /*                                 */ 
+PIN 16  = E                        ; /*                                 */ 
+PIN 17  = D                        ; /*                                 */ 
+PIN 18  = C                        ; /*                                 */ 
+PIN 19  = B                        ; /*                                 */ 
+PIN 20  = A                        ; /*                                 */ 
+
+FIELD INPUT = [D3,D2,D1,D0]; /* Defines input array */
+FIELD OUTPUT = [AI,BI,CI,DI,EI,FI,GI]; /* Defines intermediate output array */
+TABLE INPUT => OUTPUT
+{
+  'b'0000 => 'b'1111110;
+  'b'0001 => 'b'0110000;
+  'b'0010 => 'b'1101101;
+  'b'0011 => 'b'1111001;
+  'b'0100 => 'b'0110011;
+  'b'0101 => 'b'1011011;
+  'b'0110 => 'b'1011111;
+  'b'0111 => 'b'1110000;
+  'b'1000 => 'b'1111111;
+  'b'1001 => 'b'1110011;
+  'b'1010 => 'b'1110111;
+  'b'1011 => 'b'0011111;
+  'b'1100 => 'b'1001110;
+  'b'1101 => 'b'0111101;
+  'b'1110 => 'b'1001111;
+  'b'1111 => 'b'1000111;
+}
+
+
+A.d = AI;
+A.ar = !RESET;
+A.sp = 'b'0;
+
+B.d = BI;
+B.ar = !RESET;
+B.sp = 'b'0;
+
+C.d = CI;
+C.ar = !RESET;
+C.sp = 'b'0;
+
+D.d = DI;
+D.ar = !RESET;
+D.sp = 'b'0;
+
+E.d = EI;
+E.ar = !RESET;
+E.sp = 'b'0;
+
+F.d = FI;
+F.ar = !RESET;
+F.sp = 'b'0;
+
+G.d = GI;
+G.ar = !RESET;
+G.sp = 'b'0;

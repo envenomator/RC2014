@@ -1,0 +1,15 @@
+Name     bcd;
+PartNo   00;
+Date     10/11/2022;
+Revision 01;
+Designer Jeroen Venema;
+Company  Venomspot;
+Assembly None;
+Location ;
+Device   g22v10;
+
+
+ORDER: 
+
+
+VECTORS:

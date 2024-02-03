@@ -1,0 +1,163 @@
+{COMPONENT C:\SOURCE\7SEGMENT\BCD.SYM
+
+ {ENVIRONMENT
+  {PDIFvrev 3.00}
+  {Program "CUPL(WM) Version 5.0a"}
+  {DBtype "Schematic"}
+  {DBvrev 1.01}
+  {DBtime "Thu Nov 10 19:48:20 2022 "}
+  {DBunit "MIL"}
+  {DBgrid 10}
+  {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
+          "PINNAM" 6 "PINCON" 4 "REFDES" 2 "ATTR" 6 "SDOT" 1 
+          "DEVICE" 5 "OUTLIN" 5 "ATTR2" 6 "NOTES" 6 "NETNAM" 4 
+          "CMPNAM" 5 "BORDER" 5}
+ }
+
+ {USER
+  {VIEW
+   {Mode SYMB}
+   {Nlst OPEN}
+   {Vw 0 0 2}
+   {Lv 12 2 2 2 0 0 2 2 2 2 0 0 2 1 2 0 0 0 0}
+   {Gs 10 10}
+  }
+ }
+
+ {DISPLAY
+  [Ly "PINNUM"]
+  [Ls "SOLID"][Wd 0]
+  [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+ }
+
+ {SYMBOL
+  {PIN_DEF
+   [Ly "PINCON"]
+   {P IOWR {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P RESET {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P D3 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P D2 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P D1 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
+   {P D0 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
+   {P G {Pt "OUTPUT"}{Lq 0}{Ploc 280 20}}
+   {P F {Pt "OUTPUT"}{Lq 0}{Ploc 280 40}}
+   {P E {Pt "OUTPUT"}{Lq 0}{Ploc 280 60}}
+   {P D {Pt "OUTPUT"}{Lq 0}{Ploc 280 80}}
+   {P C {Pt "OUTPUT"}{Lq 0}{Ploc 280 100}}
+   {P B {Pt "OUTPUT"}{Lq 0}{Ploc 280 120}}
+   {P A {Pt "OUTPUT"}{Lq 0}{Ploc 280 140}}
+  }
+
+  {PKG
+   [Ly "REFDES"]
+   [Ts 25][Tj "CB"][Tr 0][Tm "N"]
+   {Rdl 190 170}
+
+   [Ly "PINNUM"]
+   [Ts 15][Tj "RC"]
+   {Pnl 120 130}
+   {Pnl 120 110}
+   {Pnl 120 90}
+   {Pnl 120 70}
+   {Pnl 120 50}
+   {Pnl 120 30}
+   [Ts 15][Tj "LC"]
+   {Pnl 260 30}
+   {Pnl 260 50}
+   {Pnl 260 70}
+   {Pnl 260 90}
+   {Pnl 260 110}
+   {Pnl 260 130}
+   {Pnl 260 150}
+
+   {Sd A 2 3 5 6 7 8 14 15 16 17 18 19 20}
+  }
+
+  {PIC
+   [Ly "GATE"]
+   [Ts 15][Tj "LC"][Tr 0][Tm "N"]
+   {R 130 160 250 0}
+   {L 130 120 100 120}
+   {L 130 100 100 100}
+   {L 130 80 100 80}
+   {L 130 60 100 60}
+   {L 130 40 100 40}
+   {L 130 20 100 20}
+   {L 250 20 280 20}
+   {L 250 40 280 40}
+   {L 250 60 280 60}
+   {L 250 80 280 80}
+   {L 250 100 280 100}
+   {L 250 120 280 120}
+   {L 250 140 280 140}
+   [Ly "PINNAM"]
+   [Tj "LC"]
+   {T "IOWR" 140 120}
+   {T "RESET" 140 100}
+   {T "D3" 140 80}
+   {T "D2" 140 60}
+   {T "D1" 140 40}
+   {T "D0" 140 20}
+   [Tj "RC"]
+   {T "G" 240 20}
+   {T "F" 240 40}
+   {T "E" 240 60}
+   {T "D" 240 80}
+   {T "C" 240 100}
+   {T "B" 240 120}
+   {T "A" 240 140}
+   [Ly "DEVICE"]
+   [Tj "CT"]
+   {T "G22V10CP" 190 -10}
+  }
+
+  {ATR
+   {IN
+    {Org 100 20}
+    {Ty 255}
+   }
+   {EX
+    [Ly "ATTR2"]
+    [Ts 12][Tj "CT"][Tr 0][Tm "N"]
+    {At PLD C:\SOURCE\7SEGMENT\BCD 190 160}
+   }
+  }
+ }
+
+ {DETAIL
+  {ANNOTATE
+  }
+
+  {NET_DEF
+   {N IOWR
+   }
+   {N RESET
+   }
+   {N D3
+   }
+   {N D2
+   }
+   {N D1
+   }
+   {N D0
+   }
+   {N G
+   }
+   {N F
+   }
+   {N E
+   }
+   {N D
+   }
+   {N C
+   }
+   {N B
+   }
+   {N A
+   }
+  }
+
+  {SUBCOMP
+  }
+ }
+}

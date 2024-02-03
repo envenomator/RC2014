@@ -1,0 +1,180 @@
+%SIGNAL
+PIN  20 =  A 
+PIN  19 =  B 
+PIN  18 =  C 
+PIN  17 =  D 
+PIN   8 =  D0 
+PIN   7 =  D1 
+PIN   6 =  D2 
+PIN   5 =  D3 
+PIN  16 =  E 
+PIN  15 =  F 
+PIN  14 =  G 
+PIN   2 =  IOWR 
+PIN   3 =  RESET 
+%END
+
+%FIELD
+FIELD INPUT = D3,D2,D1,D0
+FIELD OUTPUT = AI,BI,CI,DI,EI,FI,GI
+%END
+
+%EQUATION
+A.d  =>
+    !D0 & !D2 & !D3
+  # D0 & D1 & D2 & D3
+  # D0 & D1 & !D3
+  # D0 & !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D1 & !D2 & D3
+  # !D0 & D1 & !D2 & D3
+  # !D0 & !D1 & D2 & D3
+
+A.ar B.ar C.ar D.ar E.ar F.ar G.ar  =>
+    !RESET
+
+A.sp B.sp C.sp D.sp E.sp F.sp G.sp  =>
+    0 
+
+AI =>
+    !D0 & !D2 & !D3
+  # D0 & D1 & D2 & D3
+  # D0 & D1 & !D3
+  # D0 & !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D1 & !D2 & D3
+  # !D0 & D1 & !D2 & D3
+  # !D0 & !D1 & D2 & D3
+
+B.d  =>
+    D0 & !D1 & D2 & D3
+  # !D2 & !D3
+  # !D0 & !D1 & D2 & !D3
+  # !D0 & D1 & !D2 & D3
+  # D0 & D1 & D2 & !D3
+  # !D1 & !D2 & D3
+
+B.ar  =>
+    
+B.sp  =>
+    
+BI =>
+    D0 & !D1 & D2 & D3
+  # !D2 & !D3
+  # !D0 & !D1 & D2 & !D3
+  # !D0 & D1 & !D2 & D3
+  # D0 & D1 & D2 & !D3
+  # !D1 & !D2 & D3
+
+C.d  =>
+    D0 & !D1 & D2 & D3
+  # !D2 & D3
+  # D0 & D1 & !D3
+  # !D1 & !D3
+  # !D0 & D1 & D2 & !D3
+
+C.ar  =>
+    
+C.sp  =>
+    
+CI =>
+    D0 & !D1 & D2 & D3
+  # !D2 & D3
+  # D0 & D1 & !D3
+  # !D1 & !D3
+  # !D0 & D1 & D2 & !D3
+
+D.d  =>
+    !D0 & !D2 & !D3
+  # !D0 & !D1 & D3
+  # D0 & D1 & !D2
+  # D0 & !D1 & D2
+  # !D0 & D1 & D2
+
+D.ar  =>
+    
+D.sp  =>
+    
+DI =>
+    !D0 & !D2 & !D3
+  # !D0 & !D1 & D3
+  # D0 & D1 & !D2
+  # D0 & !D1 & D2
+  # !D0 & D1 & D2
+
+E.d  =>
+    !D1 & D2 & D3
+  # D0 & D1 & D3
+  # !D0 & D1 & D2
+  # !D0 & !D2
+
+E.ar  =>
+    
+E.sp  =>
+    
+EI =>
+    !D1 & D2 & D3
+  # D0 & D1 & D3
+  # !D0 & D1 & D2
+  # !D0 & !D2
+
+F.d  =>
+    !D0 & !D1 & !D3
+  # D0 & D1 & D2 & D3
+  # D0 & !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D0 & !D1 & D2 & D3
+  # !D2 & D3
+
+F.ar  =>
+    
+F.sp  =>
+    
+FI =>
+    !D0 & !D1 & !D3
+  # D0 & D1 & D2 & D3
+  # D0 & !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D0 & !D1 & D2 & D3
+  # !D2 & D3
+
+G.d  =>
+    D0 & D2 & D3
+  # D1 & !D2
+  # !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D1 & !D2 & D3
+
+G.ar  =>
+    
+G.sp  =>
+    
+GI =>
+    D0 & D2 & D3
+  # D1 & !D2
+  # !D1 & D2 & !D3
+  # !D0 & D1 & D2
+  # !D1 & !D2 & D3
+
+A.oe  =>
+    1 
+
+B.oe  =>
+    1 
+
+C.oe  =>
+    1 
+
+D.oe  =>
+    1 
+
+E.oe  =>
+    1 
+
+F.oe  =>
+    1 
+
+G.oe  =>
+    1 
+
+%END
