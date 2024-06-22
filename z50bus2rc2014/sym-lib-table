@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "mc14495p")(type "KiCad")(uri "${KIPRJMOD}/z50-7segment-backups/mc14495p.kicad_sym")(options "")(descr ""))
+)
